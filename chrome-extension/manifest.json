@@ -1,0 +1,14 @@
+{
+  "name": "wiki-login",
+  "manifest_version": 2,
+  "version": "2.1",
+  "description": "Hits the user login button saving an extra user click each time a session expires.",
+  
+  "permissions": ["http://*.windows-int.net/", "https://*.windows-int.net/"],
+  "content_scripts": [
+    {
+      "matches": ["http://*.windows-int.net/*", "https://*.windows-int.net/*"],
+      "js": ["loginscript.js"]
+    }
+  ]
+}
